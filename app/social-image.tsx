@@ -108,8 +108,8 @@ export async function renderSocialImage() {
             display: "flex",
           }}
         >
-          Senior Pipeline Engineer building production-grade OpenUSD, Unreal Engine,
-          and generative AI workflows for films, games, and 3D content teams.
+          Senior Pipeline Engineer and Generative AI specialist building production-grade
+          OpenUSD, Unreal Engine, and agentic 3D systems.
         </div>
 
         <div

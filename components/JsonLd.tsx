@@ -18,7 +18,7 @@ export default function JsonLd() {
         url: "https://sivasavarapu.com",
         image: "https://sivasavarapu.com/opengraph-image",
         email: "siva_nagendra@outlook.com",
-        jobTitle: "Senior Pipeline Engineer",
+        jobTitle: "Senior Pipeline Engineer and Generative AI Specialist",
         description:
           "Senior pipeline engineer specializing in OpenUSD, Unreal Engine, generative AI, and production-grade 3D pipeline systems for film, games, and real-time content teams.",
         sameAs: [
