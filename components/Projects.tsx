@@ -37,33 +37,6 @@ const GITHUB_REPOS = [
     topics: ["Houdini", "LCM", "Stable Diffusion"],
   },
   {
-    name: "TRELLIS.2",
-    description:
-      "Native and Compact Structured Latents for 3D Generation — exploring structured latent representations for high-fidelity 3D asset synthesis.",
-    stars: 0,
-    language: "Python",
-    url: "https://github.com/siva-nagendra/TRELLIS.2",
-    topics: ["3D Generation", "Deep Learning"],
-  },
-  {
-    name: "automation_scripts",
-    description:
-      "A compilation of pipeline automation scripts built over the years across Maya, Houdini, and other DCCs.",
-    stars: 0,
-    language: "Python",
-    url: "https://github.com/siva-nagendra/automation_scripts",
-    topics: ["Maya", "Houdini", "Pipeline"],
-  },
-  {
-    name: "torrento",
-    description:
-      "User-friendly, multi-threaded torrent downloader with a PySide6 graphical interface for efficient file selection and download management.",
-    stars: 2,
-    language: "Python",
-    url: "https://github.com/siva-nagendra/torrento",
-    topics: ["PySide6", "Qt6"],
-  },
-  {
     name: "2D-Gaussian-Splatting",
     description:
       "Demystifying 2D Gaussian Splatting by simplifying the implementation — an educational deep-dive into Gaussian splat rendering.",
