@@ -410,88 +410,100 @@ function Modal({ project, onClose }: { project: Project; onClose: () => void }) 
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4"
       style={{ background: "rgba(3, 7, 15, 0.82)", backdropFilter: "blur(12px)" }}
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-xl overflow-hidden rounded-[2rem] border border-white/10 bg-surface shadow-[0_30px_120px_rgba(0,0,0,0.45)]"
+        className="relative flex max-h-[calc(100svh-1.5rem)] w-full max-w-xl flex-col overflow-hidden rounded-[2rem] border border-white/10 bg-surface shadow-[0_30px_120px_rgba(0,0,0,0.45)] sm:max-h-[calc(100svh-2rem)]"
         onClick={(event) => event.stopPropagation()}
       >
-        <ProjectArt project={project} />
-        <div className="p-8">
+        <div className="sticky top-0 z-20 flex items-center justify-end border-b border-white/10 bg-slate-950/80 px-4 py-3 backdrop-blur-xl">
           <button
             onClick={onClose}
-            className="absolute right-4 top-4 rounded-full border border-white/12 bg-slate-950/55 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.2em] text-subtle"
+            className="inline-flex items-center rounded-full border border-white/12 bg-white/[0.04] px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.2em] text-subtle"
           >
             Close
           </button>
+        </div>
 
-          <div className="text-xs font-medium uppercase tracking-[0.24em]" style={{ color: project.accent }}>
-            {project.subtitle}
-          </div>
-          <h3 className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-fore">
-            {project.title}
-          </h3>
-          {project.demo && (
-            <div className="mt-6 overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-950/60">
-              <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3 text-[11px] font-medium uppercase tracking-[0.24em] text-subtle">
-                <PlayIcon className="h-4 w-4" />
-                Project demo
-              </div>
-              <div className="aspect-video">
-                <iframe
-                  src={getYouTubeEmbedUrl(project.demo)}
-                  title={`${project.title} demo`}
-                  className="h-full w-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                />
-              </div>
+        <div className="min-h-0 overflow-y-auto">
+          <ProjectArt project={project} />
+          <div className="p-6 sm:p-8">
+
+            <div className="text-xs font-medium uppercase tracking-[0.24em]" style={{ color: project.accent }}>
+              {project.subtitle}
             </div>
-          )}
-          <p className="mt-4 text-sm leading-7 text-subtle">{project.description}</p>
-
-          <div className="mt-6 flex flex-wrap gap-2">
-            {project.tags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full border px-3 py-1 text-xs font-medium uppercase tracking-[0.16em]"
-                style={{
-                  borderColor: `${project.accent}28`,
-                  background: `${project.accent}10`,
-                  color: project.accent,
-                }}
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-
-          <div className="mt-7 flex flex-wrap gap-3">
-            {project.link && (
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium transition-colors duration-200 hover:text-fore"
-                style={{ color: project.accent }}
-              >
-                View on GitHub
-                <ArrowUpRightIcon className="h-4 w-4" />
-              </a>
-            )}
+            <h3 className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-fore">
+              {project.title}
+            </h3>
             {project.demo && (
-              <a
-                href={project.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-subtle transition-colors duration-200 hover:text-fore"
-              >
-                <PlayIcon className="h-4 w-4" />
-                Watch demo
-              </a>
+              <div className="mt-6 overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-950/60">
+                <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3 text-[11px] font-medium uppercase tracking-[0.24em] text-subtle">
+                  <PlayIcon className="h-4 w-4" />
+                  Project demo
+                </div>
+                <div className="aspect-video">
+                  <iframe
+                    src={getYouTubeEmbedUrl(project.demo)}
+                    title={`${project.title} demo`}
+                    className="h-full w-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
             )}
+            <p className="mt-4 text-sm leading-7 text-subtle">{project.description}</p>
+
+            <div className="mt-6 flex flex-wrap gap-2">
+              {project.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border px-3 py-1 text-xs font-medium uppercase tracking-[0.16em]"
+                  style={{
+                    borderColor: `${project.accent}28`,
+                    background: `${project.accent}10`,
+                    color: project.accent,
+                  }}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-7 flex flex-wrap gap-3">
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium transition-colors duration-200 hover:text-fore"
+                  style={{ color: project.accent }}
+                >
+                  View on GitHub
+                  <ArrowUpRightIcon className="h-4 w-4" />
+                </a>
+              )}
+              {project.demo && (
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-subtle transition-colors duration-200 hover:text-fore"
+                >
+                  <PlayIcon className="h-4 w-4" />
+                  Watch demo
+                </a>
+              )}
+            </div>
+
+            <button
+              onClick={onClose}
+              className="mt-7 inline-flex w-full items-center justify-center rounded-full border border-white/12 bg-white/[0.04] px-5 py-3 text-sm font-medium text-fore transition-colors duration-200 hover:border-white/20 hover:bg-white/[0.06] sm:hidden"
+            >
+              Close project
+            </button>
           </div>
         </div>
       </div>
