@@ -76,6 +76,9 @@ export default function JsonLd() {
         "@id": "https://sivasavarapu.com/#profile",
         url: "https://sivasavarapu.com",
         name: "Siva Nagendra Savarapu Portfolio",
+        mainEntity: {
+          "@id": "https://sivasavarapu.com/#person",
+        },
         about: {
           "@id": "https://sivasavarapu.com/#person",
         },
