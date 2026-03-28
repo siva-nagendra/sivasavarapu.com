@@ -184,16 +184,9 @@ export default function Hero() {
 
       <div className="relative mx-auto grid min-h-[100svh] max-w-7xl gap-14 px-6 pb-12 pt-28 [perspective:1800px] lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <div className="relative z-10 max-w-3xl">
-          <div
-            ref={badgeRef}
-            className="motion-pill inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.24em] text-subtle"
-          >
-            AI, USD, and real-time pipeline systems
-          </div>
-
           <h1
             ref={headingRef}
-            className="hero-name hero-chromatic mt-7 max-w-[11ch] text-5xl font-semibold leading-[0.95] tracking-[-0.04em] text-fore sm:text-6xl lg:text-[6.25rem]"
+            className="hero-name hero-chromatic max-w-[11ch] text-5xl font-semibold leading-[0.95] tracking-[-0.04em] text-fore sm:text-6xl lg:text-[6.25rem]"
           >
             <span className="hero-name-line" data-hero-line-wrap>
               <span data-hero-line data-text="Siva" className="block">Siva</span>
