@@ -110,14 +110,14 @@ export default function Hero() {
         const nx = px - 0.5;
         const ny = py - 0.5;
 
-        setPanelRotationX(-ny * 8);
-        setPanelRotationY(nx * 11);
-        setPanelX(nx * 12);
-        setPanelY(ny * 9);
-        setPhotoX(nx * 6);
-        setPhotoY(ny * 5);
-        setDetailX(nx * -3);
-        setDetailY(ny * -2);
+        setPanelRotationX(-ny * 5);
+        setPanelRotationY(nx * 7);
+        setPanelX(nx * 8);
+        setPanelY(ny * 6);
+        setPhotoX(nx * 3.5);
+        setPhotoY(ny * 3);
+        setDetailX(nx * -1.75);
+        setDetailY(ny * -1.2);
 
         section.style.setProperty("--hero-flare-x", `${px * 100}%`);
         section.style.setProperty("--hero-flare-y", `${py * 100}%`);

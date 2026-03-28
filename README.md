@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# sivasavarapu.com
 
-## Getting Started
+Personal portfolio for Siva Nagendra Savarapu, built with Next.js App Router, Tailwind CSS v4, GSAP, and Three.js.
 
-First, run the development server:
+## Stack
+
+- Next.js 16
+- React 19
+- Tailwind CSS 4
+- GSAP
+- Three.js
+- `next-sitemap`
+
+## Local Development
+
+Install dependencies and start the app:
+
+```bash
+npm install
+npm run dev
+```
+
+The site runs locally at [http://localhost:3000](http://localhost:3000).
+
+## Scripts
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`npm run build` also generates sitemap files through `next-sitemap`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/` contains the App Router entrypoints, metadata, and global styles.
+- `components/` contains the portfolio sections and shared UI pieces.
+- `public/images/` contains the hero photo and static image assets.
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The site is deployed on Vercel.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Production alias: [https://sivasavarapucom.vercel.app](https://sivasavarapucom.vercel.app)
+- Custom domain: [https://sivasavarapu.com](https://sivasavarapu.com)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+If the custom domain needs to be reconfigured outside Vercel, the current apex DNS points to:
 
-## Deploy on Vercel
+```txt
+A  sivasavarapu.com  76.76.21.21
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`www.sivasavarapu.com` is also configured to point at Vercel.
