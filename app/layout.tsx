@@ -62,9 +62,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/opengraph-image",
-        width: 1200,
-        height: 630,
+        url: "/opengraph-image.png",
+        width: 1224,
+        height: 682,
         alt: "Siva Nagendra Savarapu portfolio preview",
       },
     ],
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: ["/twitter-image"],
+    images: ["/twitter-image.png"],
   },
   robots: {
     index: true,
