@@ -13,7 +13,7 @@ const JOBS = [
     period: "May 2025 - Mar 2026",
     location: "Vancouver, Canada",
     highlights: [
-      "Fortnite asset pipeline spanning Modelling, Texturing, Rigging, and Animation — Python/C++ tools across Maya and UE",
+      "Fortnite asset pipeline spanning Modelling, Texturing, Rigging, and Animation with Python/C++ tools across Maya and UE",
       "Deployed MCP servers for Maya and Unreal Engine, integrating Claude Code into Epic's production pipeline",
       "Built agentic C++ UE Runtime combining Claude, Gemini, Depth Pro, Grounding DINO, and SAM2",
       "Contributed to GenStudio internal GenAI product; implemented C2PA content provenance workflows",
@@ -112,7 +112,7 @@ export default function Experience() {
                 ref={(el) => { if (el) itemsRef.current[i] = el; }}
                 className="sm:pl-10 relative"
               >
-                {/* Timeline dot — suppressHydrationWarning: dynamic hex background color */}
+                {/* Timeline dot, suppressHydrationWarning: dynamic hex background color */}
                 <div
                   className="motion-glow absolute left-0 top-2 hidden h-2.5 w-2.5 -translate-x-[4px] rounded-full ring-1 ring-offset-2 ring-offset-bg sm:block"
                   style={{ background: job.color }}

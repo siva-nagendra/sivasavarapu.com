@@ -48,6 +48,8 @@ const LINKS: Array<{
   },
 ];
 
+const RESUME_URL = "/documents/siva-nagendra-savarapu-resume.pdf";
+
 export default function Contact() {
   return (
     <section id="contact" className="py-28 px-6">
@@ -82,6 +84,15 @@ export default function Contact() {
             >
               <MailIcon className="h-4 w-4" />
               Email Siva
+            </a>
+            <a
+              href={RESUME_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="motion-pill mt-4 inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-fore transition-colors duration-200 hover:border-accent/30 hover:text-accent"
+            >
+              <ArrowUpRightIcon className="h-4 w-4" />
+              View Resume
             </a>
           </div>
 

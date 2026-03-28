@@ -6,6 +6,7 @@ import {
   CubeIcon,
   NodesIcon,
   PipelineIcon,
+  PlayIcon,
   SparkIcon,
   WaveIcon,
 } from "@/components/SiteIcons";
@@ -21,10 +22,11 @@ const GITHUB_REPOS = [
   {
     name: "usdchat",
     description:
-      "Conversational AI bot for OpenUSD — interact with your USD Stage using natural language. Ask questions, query prims, and modify properties without writing USD Python.",
+      "Conversational AI bot for OpenUSD that lets you interact with your USD Stage using natural language. Ask questions, query prims, and modify properties without writing USD Python.",
     stars: 31,
     language: "Python",
     url: "https://github.com/siva-nagendra/usdchat",
+    demo: "https://youtu.be/9G0QUs5uoBg?si=gQCP8r6VzrL6JowH",
     topics: ["OpenUSD", "LLM", "Tool Calling"],
   },
   {
@@ -34,12 +36,13 @@ const GITHUB_REPOS = [
     stars: 0,
     language: "Jupyter Notebook",
     url: "https://github.com/siva-nagendra/ai-render",
+    demo: "https://youtu.be/9P8vtf9dVwU?si=MVTGcSe9KSoq50Nn",
     topics: ["Houdini", "LCM", "Stable Diffusion"],
   },
   {
     name: "2D-Gaussian-Splatting",
     description:
-      "Demystifying 2D Gaussian Splatting by simplifying the implementation — an educational deep-dive into Gaussian splat rendering.",
+      "Demystifying 2D Gaussian Splatting by simplifying the implementation, an educational deep-dive into Gaussian splat rendering.",
     stars: 0,
     language: "Jupyter Notebook",
     url: "https://github.com/siva-nagendra/2D-Gaussian-Splatting",
@@ -56,6 +59,7 @@ interface Project {
   description: string;
   tags: string[];
   link?: string;
+  demo?: string;
   accent: string;
   metric: string;
   visual: ProjectVisualKind;
@@ -70,6 +74,7 @@ const PROJECTS: Project[] = [
       "A conversational AI bot that lets you interact with USD Stage using natural language. Ask questions about your scene graph, query prims, modify properties, and traverse hierarchies without writing a single line of USD Python. Built on OpenUSD + LLM tool-calling. 31 GitHub stars.",
     tags: ["Python", "OpenUSD", "LLM", "Tool Calling"],
     link: "https://github.com/siva-nagendra/usdchat",
+    demo: "https://youtu.be/9G0QUs5uoBg?si=gQCP8r6VzrL6JowH",
     accent: "#6ee7f7",
     metric: "31 GitHub stars",
     visual: "chat",
@@ -79,7 +84,7 @@ const PROJECTS: Project[] = [
     title: "Agentic 3D Scene Builder",
     subtitle: "C++ Unreal Engine Runtime",
     description:
-      "An end-to-end agentic pipeline built in C++ inside Unreal Engine that constructs 3D scenes from a single user prompt or image. Combines Claude (Anthropic Agent SDK) with UE MCP, Gemini/Meshy/Tripo for mesh generation, Depth Pro for depth estimation, Grounding DINO for object detection, and SAM2 for segmentation. Mesh placement via custom raycasting + GLTF plugin.",
+      "An end-to-end agentic pipeline built in C++ inside Unreal Engine that constructs 3D scenes from a single user prompt or image. Combines Claude (Anthropic Agent SDK) with UE MCP, Gemini/Meshy/Tripo for mesh generation, Depth Pro for depth estimation, Grounding DINO for object detection, and SAM2 for segmentation. Mesh placement via custom raycasting + GLTF plugin. Designed to shorten the loop between concept intent, scene assembly, and in-engine iteration for production teams exploring AI-assisted world building.",
     tags: ["C++", "Unreal Engine", "Claude", "Gemini", "Depth Pro", "SAM2", "GLTF"],
     accent: "#a78bfa",
     metric: "Prompt to 3D scene",
@@ -88,9 +93,9 @@ const PROJECTS: Project[] = [
   {
     id: 3,
     title: "MCP for Maya & Unreal Engine",
-    subtitle: "Production MCP Deployment — Epic Games",
+    subtitle: "Production MCP Deployment | Epic Games",
     description:
-      "Designed and deployed Model Context Protocol servers for Maya and Unreal Engine, integrating Claude Code into Epic's live Fortnite asset pipeline. Among the earliest production MCP deployments at a major game studio, enabling LLM-driven pipeline automation across Modelling, Rigging, and Animation departments.",
+      "Designed and deployed Model Context Protocol servers for Maya and Unreal Engine, integrating Claude Code into Epic's live Fortnite asset pipeline. Among the earliest production MCP deployments at a major game studio, enabling LLM-driven pipeline automation across Modelling, Rigging, and Animation departments. The work focused on making AI assistance reliable inside real studio workflows, with tooling that respected production constraints instead of living only as a prototype.",
     tags: ["MCP", "Claude Code", "Maya", "Unreal Engine", "Python"],
     accent: "#34d399",
     metric: "Deployed in production",
@@ -99,9 +104,9 @@ const PROJECTS: Project[] = [
   {
     id: 4,
     title: "GenStudio",
-    subtitle: "Internal Generative AI Product — Epic Games",
+    subtitle: "Internal Generative AI Product | Epic Games",
     description:
-      "Contributed to GenStudio, an internal generative AI platform integrating Gemini, OpenAI image models, Meshy, Tripo, and Rodin mesh generation for AI-assisted 3D asset creation. Also implemented C2PA content provenance workflows ensuring cryptographic credential tracking for all AI-generated image outputs.",
+      "Contributed to GenStudio, an internal generative AI platform integrating Gemini, OpenAI image models, Meshy, Tripo, and Rodin mesh generation for AI-assisted 3D asset creation. Also implemented C2PA content provenance workflows ensuring cryptographic credential tracking for all AI-generated image outputs. This work helped connect model experimentation with safer, traceable, and production-aware tooling for internal creative teams.",
     tags: ["Gemini", "OpenAI", "Meshy", "Rodin", "C2PA", "Python"],
     accent: "#fb923c",
     metric: "Content provenance built in",
@@ -112,7 +117,7 @@ const PROJECTS: Project[] = [
     title: "RAG Pipeline Assistant",
     subtitle: "Blueprint-Graph Generator",
     description:
-      "A RAG-powered assistant that auto-generates visual workflow graphs (analogous to Unreal Engine Blueprints) from natural language queries. Custom RAG backend built on internal pipeline documentation, enabling artists and TDs to describe a workflow in plain English and receive a structured, executable graph.",
+      "A RAG-powered assistant that auto-generates visual workflow graphs (analogous to Unreal Engine Blueprints) from natural language queries. Custom RAG backend built on internal pipeline documentation, enabling artists and TDs to describe a workflow in plain English and receive a structured, executable graph. The goal was to turn buried knowledge into something operational, reducing the gap between documentation, onboarding, and everyday pipeline execution.",
     tags: ["RAG", "Python", "LLM", "Graph Generation", "Pipeline"],
     accent: "#f472b6",
     metric: "Text to executable graph",
@@ -120,17 +125,32 @@ const PROJECTS: Project[] = [
   },
   {
     id: 6,
-    title: "AI Render — Houdini + LCM",
+    title: "AI Render | Houdini + LCM",
     subtitle: "Latent Consistency Models in Production DCC",
     description:
       "Applied Latent Consistency Model research directly inside Houdini, enabling rapid AI-driven image generation within a production DCC environment. Explored how LCMs could accelerate iterative look development and concept rendering workflows without leaving the 3D application.",
     tags: ["Houdini", "LCM", "Stable Diffusion", "Python", "PyTorch"],
     link: "https://github.com/siva-nagendra/ai-render",
+    demo: "https://youtu.be/9P8vtf9dVwU?si=MVTGcSe9KSoq50Nn",
     accent: "#fbbf24",
     metric: "Research inside Houdini",
     visual: "render",
   },
 ];
+
+function getYouTubeEmbedUrl(url: string) {
+  try {
+    const parsed = new URL(url);
+    if (parsed.hostname.includes("youtu.be")) {
+      const id = parsed.pathname.replace("/", "");
+      return `https://www.youtube.com/embed/${id}`;
+    }
+    const id = parsed.searchParams.get("v");
+    return id ? `https://www.youtube.com/embed/${id}` : url;
+  } catch {
+    return url;
+  }
+}
 
 function GridOverlay({ accent }: { accent: string }) {
   return (
@@ -413,6 +433,23 @@ function Modal({ project, onClose }: { project: Project; onClose: () => void }) 
           <h3 className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-fore">
             {project.title}
           </h3>
+          {project.demo && (
+            <div className="mt-6 overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-950/60">
+              <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3 text-[11px] font-medium uppercase tracking-[0.24em] text-subtle">
+                <PlayIcon className="h-4 w-4" />
+                Project demo
+              </div>
+              <div className="aspect-video">
+                <iframe
+                  src={getYouTubeEmbedUrl(project.demo)}
+                  title={`${project.title} demo`}
+                  className="h-full w-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          )}
           <p className="mt-4 text-sm leading-7 text-subtle">{project.description}</p>
 
           <div className="mt-6 flex flex-wrap gap-2">
@@ -431,18 +468,31 @@ function Modal({ project, onClose }: { project: Project; onClose: () => void }) 
             ))}
           </div>
 
-          {project.link && (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-7 inline-flex items-center gap-2 text-sm font-medium transition-colors duration-200 hover:text-fore"
-              style={{ color: project.accent }}
-            >
-              View on GitHub
-              <ArrowUpRightIcon className="h-4 w-4" />
-            </a>
-          )}
+          <div className="mt-7 flex flex-wrap gap-3">
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium transition-colors duration-200 hover:text-fore"
+                style={{ color: project.accent }}
+              >
+                View on GitHub
+                <ArrowUpRightIcon className="h-4 w-4" />
+              </a>
+            )}
+            {project.demo && (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-subtle transition-colors duration-200 hover:text-fore"
+              >
+                <PlayIcon className="h-4 w-4" />
+                Watch demo
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </div>
@@ -480,15 +530,15 @@ export default function Projects() {
           </a>
         </div>
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 items-start gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {PROJECTS.map((project) => (
             <button
               key={project.id}
               onClick={() => setActiveProject(project)}
-              className="motion-card project-card-shell group overflow-hidden rounded-[1.5rem] border border-white/10 bg-surface text-left hover:border-white/18 hover:shadow-[0_24px_80px_rgba(3,7,15,0.35)]"
+              className="motion-card project-card-shell group flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-white/10 bg-surface text-left hover:border-white/18 hover:shadow-[0_24px_80px_rgba(3,7,15,0.35)]"
             >
               <ProjectArt project={project} />
-              <div className="p-5">
+              <div className="flex flex-1 flex-col p-5">
                 <div className="text-xs font-medium uppercase tracking-[0.24em]" style={{ color: project.accent }}>
                   {project.subtitle}
                 </div>
@@ -496,9 +546,15 @@ export default function Projects() {
                   <h3 className="text-lg font-semibold tracking-[-0.02em] text-fore">{project.title}</h3>
                   <ArrowUpRightIcon className="mt-1 h-4 w-4 shrink-0 text-subtle transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-fore" />
                 </div>
-                <p className="mt-3 line-clamp-3 text-sm leading-6 text-subtle">
+                <p className="mt-3 min-h-[9rem] line-clamp-5 text-sm leading-6 text-subtle">
                   {project.description}
                 </p>
+                {project.demo && (
+                  <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.18em] text-subtle">
+                    <PlayIcon className="h-3.5 w-3.5" />
+                    Demo available
+                  </div>
+                )}
               </div>
             </button>
           ))}
@@ -522,17 +578,19 @@ export default function Projects() {
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {GITHUB_REPOS.map((repo) => (
-              <a
+              <div
                 key={repo.name}
-                href={repo.url}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="group flex flex-col rounded-[1.3rem] border border-white/10 bg-white/[0.025] p-5 transition-all duration-200 hover:border-white/18 hover:bg-white/[0.04]"
               >
                 <div className="mb-3 flex items-start justify-between gap-3">
-                  <span className="text-sm font-semibold tracking-[-0.02em] text-fore transition-colors duration-200 group-hover:text-accent">
+                  <a
+                    href={repo.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-semibold tracking-[-0.02em] text-fore transition-colors duration-200 hover:text-accent"
+                  >
                     {repo.name}
-                  </span>
+                  </a>
                   {repo.stars > 0 && (
                     <span className="flex shrink-0 items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[11px] font-medium uppercase tracking-[0.16em] text-subtle">
                       <span aria-hidden className="text-highlight">
@@ -545,28 +603,52 @@ export default function Projects() {
                 <p className="mb-5 flex-1 text-sm leading-6 text-subtle">
                   {repo.description}
                 </p>
-                <div className="mt-auto flex items-end justify-between gap-3">
-                  <div className="flex items-center gap-2">
-                    <span
-                      className="h-2.5 w-2.5 rounded-full shrink-0"
-                      style={{ background: LANG_COLORS[repo.language] ?? "#888" }}
-                    />
-                    <span className="text-xs font-medium uppercase tracking-[0.16em] text-subtle">
-                      {repo.language}
-                    </span>
-                  </div>
-                  <div className="flex flex-wrap justify-end gap-1.5">
-                    {repo.topics.slice(0, 2).map((topic) => (
+                <div className="mt-auto space-y-4">
+                  <div className="flex items-end justify-between gap-3">
+                    <div className="flex items-center gap-2">
                       <span
-                        key={topic}
-                        className="rounded-full border border-white/10 bg-white/[0.04] px-2 py-1 text-[10px] font-medium uppercase tracking-[0.16em] text-subtle"
-                      >
-                        {topic}
+                        className="h-2.5 w-2.5 rounded-full shrink-0"
+                        style={{ background: LANG_COLORS[repo.language] ?? "#888" }}
+                      />
+                      <span className="text-xs font-medium uppercase tracking-[0.16em] text-subtle">
+                        {repo.language}
                       </span>
-                    ))}
+                    </div>
+                    <div className="flex flex-wrap justify-end gap-1.5">
+                      {repo.topics.slice(0, 2).map((topic) => (
+                        <span
+                          key={topic}
+                          className="rounded-full border border-white/10 bg-white/[0.04] px-2 py-1 text-[10px] font-medium uppercase tracking-[0.16em] text-subtle"
+                        >
+                          {topic}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-3 text-xs font-medium uppercase tracking-[0.18em]">
+                    <a
+                      href={repo.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-subtle transition-colors duration-200 hover:text-fore"
+                    >
+                      View repo
+                      <ArrowUpRightIcon className="h-3.5 w-3.5" />
+                    </a>
+                    {repo.demo && (
+                      <a
+                        href={repo.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-accent transition-opacity duration-200 hover:opacity-80"
+                      >
+                        <PlayIcon className="h-3.5 w-3.5" />
+                        Watch demo
+                      </a>
+                    )}
                   </div>
                 </div>
-              </a>
+              </div>
             ))}
           </div>
         </div>

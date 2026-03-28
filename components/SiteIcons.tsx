@@ -101,3 +101,12 @@ export function WaveIcon(props: IconProps) {
     </svg>
   );
 }
+
+export function PlayIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" {...props}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="m10 8.75 5.5 3.25L10 15.25v-6.5Z" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}

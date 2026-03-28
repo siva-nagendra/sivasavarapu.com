@@ -13,7 +13,7 @@
   --highlight-dim: rgba(246, 197, 110, 0.16);
 }
 
-/* Tailwind theme tokens — generates text-accent, bg-surface, border-edge, etc. */
+/* Tailwind theme tokens, generates text-accent, bg-surface, border-edge, etc. */
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);

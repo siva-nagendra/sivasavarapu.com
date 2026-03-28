@@ -18,7 +18,7 @@ const ARTWORKS = [
   },
   {
     title: "Isolated Street | Unity HDRP",
-    description: "Realtime cyberpunk scene in Unity HDRP — night shot lighting, rain particles, and wet surface materials.",
+    description: "Realtime cyberpunk scene in Unity HDRP with night shot lighting, rain particles, and wet surface materials.",
     likes: 53,
     permalink: "https://www.artstation.com/artwork/OynG88",
     cover: "https://cdnb.artstation.com/p/assets/images/images/025/377/801/small_square/siva-nagendra-vlcsnap-2020-03-31-02h32m31s692.jpg?1585603102",
@@ -26,8 +26,8 @@ const ARTWORKS = [
     hasVideo: true,
   },
   {
-    title: "Old Temple Wall — Substance",
-    description: "Procedural temple wall material in Substance Designer — stone weathering, moss, and displacement height maps.",
+    title: "Old Temple Wall | Substance",
+    description: "Procedural temple wall material in Substance Designer with stone weathering, moss, and displacement height maps.",
     likes: 9,
     permalink: "https://www.artstation.com/artwork/1ng4BX",
     cover: "https://cdna.artstation.com/p/assets/images/images/021/232/228/small_square/siva-nagendra-screenshot004.jpg?1570884559",
@@ -102,7 +102,7 @@ export default function Artwork() {
                 {art.hasVideo && <span className="ml-1 text-[10px] text-accent" aria-label="has video">▶</span>}
               </div>
 
-              {/* Bottom info — always visible but fuller on hover */}
+              {/* Bottom info, always visible but fuller on hover */}
               <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-1 group-hover:translate-y-0 transition-transform duration-300">
                 <p className="text-lg font-semibold text-white leading-tight mb-2 line-clamp-2">
                   {art.title}

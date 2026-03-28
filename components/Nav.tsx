@@ -11,6 +11,8 @@ const LINKS = [
   { label: "Contact", href: "#contact" },
 ];
 
+const RESUME_URL = "/documents/siva-nagendra-savarapu-resume.pdf";
+
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("");
@@ -71,6 +73,16 @@ export default function Nav() {
               </a>
             </li>
           ))}
+          <li>
+            <a
+              href={RESUME_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-subtle transition-colors duration-200 hover:text-fore"
+            >
+              Resume
+            </a>
+          </li>
         </ul>
         <a
           href="mailto:siva_nagendra@outlook.com"
