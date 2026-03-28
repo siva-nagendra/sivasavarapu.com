@@ -10,6 +10,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sivasavarapu.com"),
   title: "Siva Nagendra Savarapu — Pipeline Engineer & Generative AI Specialist",
   description:
     "Senior Pipeline Engineer and Generative AI specialist with 10+ years at Epic Games, Sony Pictures Imageworks, Animal Logic, and MPC. Expert in OpenUSD, Python/C++, Unreal Engine, and agentic 3D systems.",
@@ -32,12 +33,21 @@ export const metadata: Metadata = {
     url: "https://sivasavarapu.com",
     siteName: "Siva Nagendra Savarapu",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Siva Nagendra Savarapu portfolio preview",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Siva Nagendra Savarapu — Pipeline Engineer & Generative AI",
     description:
       "Senior Pipeline Engineer and Generative AI specialist at the intersection of AI and 3D/VFX production.",
+    images: ["/twitter-image"],
   },
   robots: {
     index: true,
