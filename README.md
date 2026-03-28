@@ -9,7 +9,6 @@ Personal portfolio for Siva Nagendra Savarapu, built with Next.js App Router, Ta
 - Tailwind CSS 4
 - GSAP
 - Three.js
-- `next-sitemap`
 
 ## Local Development
 
@@ -30,11 +29,9 @@ npm run build
 npm run start
 ```
 
-`npm run build` also generates sitemap files through `next-sitemap`.
-
 ## Project Structure
 
-- `app/` contains the App Router entrypoints, metadata, and global styles.
+- `app/` contains the App Router entrypoints, metadata, sitemap, robots, and global styles.
 - `components/` contains the portfolio sections and shared UI pieces.
 - `public/images/` contains the hero photo and static image assets.
 

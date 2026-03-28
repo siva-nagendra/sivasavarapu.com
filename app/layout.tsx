@@ -3,6 +3,13 @@ import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import JsonLd from "@/components/JsonLd";
 
+const SITE_URL = "https://sivasavarapu.com";
+const SITE_NAME = "Siva Nagendra Savarapu";
+const SITE_TITLE =
+  "Siva Nagendra Savarapu | Senior Pipeline Engineer and Generative AI";
+const SITE_DESCRIPTION =
+  "Portfolio of Siva Nagendra Savarapu, a senior pipeline engineer building production-grade OpenUSD, Unreal Engine, generative AI, and agentic 3D systems for films, games, and real-time content teams.";
+
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   subsets: ["latin"],
@@ -10,28 +17,48 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sivasavarapu.com"),
-  title: "Siva Nagendra Savarapu — Pipeline Engineer & Generative AI Specialist",
-  description:
-    "Senior Pipeline Engineer and Generative AI specialist with 10+ years at Epic Games, Sony Pictures Imageworks, Animal Logic, and MPC. Expert in OpenUSD, Python/C++, Unreal Engine, and agentic 3D systems.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_TITLE,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  referrer: "origin-when-cross-origin",
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  category: "technology",
+  classification: "Portfolio",
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
+    "Siva Nagendra Savarapu",
     "Pipeline Engineer",
     "Generative AI",
     "OpenUSD",
     "Unreal Engine",
     "VFX",
     "3D",
+    "3D Pipelines",
+    "Real-Time Pipelines",
+    "PyTorch",
+    "TensorFlow",
+    "Computer Vision",
+    "USD Stage",
     "MCP",
     "Epic Games",
     "Sony Pictures Imageworks",
+    "Animal Logic",
+    "MPC Film",
   ],
   authors: [{ name: "Siva Nagendra Savarapu" }],
   openGraph: {
-    title: "Siva Nagendra Savarapu — Pipeline Engineer & Generative AI",
-    description:
-      "Senior Pipeline Engineer and Generative AI specialist with 10+ years at top-tier VFX and game studios.",
-    url: "https://sivasavarapu.com",
-    siteName: "Siva Nagendra Savarapu",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    locale: "en_CA",
     type: "website",
     images: [
       {
@@ -44,14 +71,20 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Siva Nagendra Savarapu — Pipeline Engineer & Generative AI",
-    description:
-      "Senior Pipeline Engineer and Generative AI specialist at the intersection of AI and 3D/VFX production.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     images: ["/twitter-image"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
