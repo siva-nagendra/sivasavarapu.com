@@ -1,10 +1,19 @@
 export default function JsonLd() {
+  const personId = "https://sivasavarapu.com/#person";
+  const websiteId = "https://sivasavarapu.com/#website";
+  const sameAs = [
+    "https://github.com/siva-nagendra",
+    "https://linkedin.com/in/sivanagendra",
+    "https://www.artstation.com/sivanagendra2",
+    "https://www.imdb.com/name/nm8873739/",
+  ];
+
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://sivasavarapu.com/#website",
+        "@id": websiteId,
         url: "https://sivasavarapu.com",
         name: "Siva Nagendra Savarapu",
         description:
@@ -13,7 +22,7 @@ export default function JsonLd() {
       },
       {
         "@type": "Person",
-        "@id": "https://sivasavarapu.com/#person",
+        "@id": personId,
         name: "Siva Nagendra Savarapu",
         url: "https://sivasavarapu.com",
         image: "https://sivasavarapu.com/opengraph-image",
@@ -21,12 +30,7 @@ export default function JsonLd() {
         jobTitle: "Senior Pipeline Engineer and Generative AI Specialist",
         description:
           "Senior pipeline engineer specializing in OpenUSD, Unreal Engine, generative AI, and production-grade 3D pipeline systems for film, games, and real-time content teams.",
-        sameAs: [
-          "https://github.com/siva-nagendra",
-          "https://linkedin.com/in/sivanagendra",
-          "https://www.artstation.com/sivanagendra2",
-          "https://www.imdb.com/name/nm8873739/",
-        ],
+        sameAs,
         knowsAbout: [
           "OpenUSD",
           "Pipeline Engineering",
@@ -77,16 +81,22 @@ export default function JsonLd() {
         url: "https://sivasavarapu.com",
         name: "Siva Nagendra Savarapu Portfolio",
         mainEntity: {
-          "@id": "https://sivasavarapu.com/#person",
+          "@id": personId,
+          "@type": "Person",
+          name: "Siva Nagendra Savarapu",
+          url: "https://sivasavarapu.com",
+          image: "https://sivasavarapu.com/opengraph-image",
+          sameAs,
         },
         about: {
-          "@id": "https://sivasavarapu.com/#person",
+          "@id": personId,
         },
         isPartOf: {
-          "@id": "https://sivasavarapu.com/#website",
+          "@id": websiteId,
         },
         primaryImageOfPage: {
-          "@id": "https://sivasavarapu.com/#person",
+          "@type": "ImageObject",
+          url: "https://sivasavarapu.com/opengraph-image",
         },
       },
     ],

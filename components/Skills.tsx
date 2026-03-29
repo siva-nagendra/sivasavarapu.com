@@ -10,7 +10,7 @@ const SKILL_GROUPS = [
   {
     label: "Languages",
     color: "#6ee7f7",
-    skills: ["Python", "C++", "MEL", "JavaScript", "TypeScript"],
+    skills: ["Python", "C++", "Java", "MEL", "JavaScript", "TypeScript"],
   },
   {
     label: "AI / ML",

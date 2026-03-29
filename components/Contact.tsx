@@ -70,7 +70,7 @@ export default function Contact() {
             <div className="mt-8 space-y-3 text-sm text-subtle">
               <div className="flex items-center gap-3">
                 <span className="h-2 w-2 rounded-full bg-accent" />
-                Based in Vancouver, open to hybrid and remote opportunities.
+                Based in Vancouver, and open to hybrid and remote opportunities in Vancouver and Sydney.
               </div>
               <div className="flex items-center gap-3">
                 <span className="h-2 w-2 rounded-full bg-highlight" />
