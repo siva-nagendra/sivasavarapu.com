@@ -31,9 +31,10 @@ const FACTS = [
   { value: "AI x 3D", label: "from research to deployed tools" },
 ];
 
-const STUDIOS = ["Epic Games", "Sony Pictures Imageworks", "Animal Logic", "MPC Film"];
+const STUDIOS = ["Bezi", "Epic Games", "Sony Pictures Imageworks", "Animal Logic"];
 const HERO_SUBTEXT =
-  "Senior Pipeline Engineer building production-grade OpenUSD, Unreal Engine, and generative AI workflows for films, games, and 3D content teams.";
+  "Senior Software Engineer at Bezi, building AI-native and Unreal Engine game development workflows for creative tools and content teams.";
+const HERO_SUBTEXT_WORDS = HERO_SUBTEXT.split(" ");
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -204,14 +205,26 @@ export default function Hero() {
             className="mt-7 max-w-2xl text-lg leading-8 text-subtle sm:text-xl"
             aria-label={HERO_SUBTEXT}
           >
-            {Array.from(HERO_SUBTEXT).map((char, index) => (
+            {HERO_SUBTEXT_WORDS.map((word, wordIndex) => (
               <span
-                key={`${char}-${index}`}
-                data-hero-sub-char
-                className="inline-block whitespace-pre"
-                aria-hidden="true"
+                key={`${word}-${wordIndex}`}
+                className="inline-block align-baseline"
               >
-                {char === " " ? "\u00A0" : char}
+                {Array.from(word).map((char, charIndex) => (
+                  <span
+                    key={`${char}-${wordIndex}-${charIndex}`}
+                    data-hero-sub-char
+                    className="inline-block"
+                    aria-hidden="true"
+                  >
+                    {char}
+                  </span>
+                ))}
+                {wordIndex < HERO_SUBTEXT_WORDS.length - 1 && (
+                  <span aria-hidden="true" className="inline-block">
+                    &nbsp;
+                  </span>
+                )}
               </span>
             ))}
           </p>

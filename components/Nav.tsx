@@ -88,11 +88,7 @@ export default function Nav() {
           href="mailto:siva_nagendra@outlook.com"
           className="motion-pill hidden md:inline-flex items-center gap-2 rounded-full border border-accent px-4 py-2 text-xs font-medium text-accent transition-all duration-200 hover:bg-accent hover:text-bg"
         >
-          <span className="relative flex h-1.5 w-1.5 shrink-0">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/70" />
-            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(74,222,128,0.9)]" />
-          </span>
-          Open to work · Vancouver / Sydney
+          Senior Software Engineer · Bezi
         </a>
       </nav>
     </header>

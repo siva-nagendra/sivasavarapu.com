@@ -27,9 +27,9 @@ export default function JsonLd() {
         url: "https://sivasavarapu.com",
         image: "https://sivasavarapu.com/opengraph-image",
         email: "siva_nagendra@outlook.com",
-        jobTitle: "Senior Pipeline Engineer and Generative AI Specialist",
+        jobTitle: "Senior Software Engineer at Bezi",
         description:
-          "Senior pipeline engineer specializing in OpenUSD, Unreal Engine, generative AI, and production-grade 3D pipeline systems for film, games, and real-time content teams.",
+          "Senior software engineer at Bezi specializing in OpenUSD, Unreal Engine, generative AI, and production-grade 3D systems for creative tools and realtime content teams.",
         sameAs,
         knowsAbout: [
           "OpenUSD",
@@ -56,6 +56,10 @@ export default function JsonLd() {
           },
         ],
         alumniOf: [
+          {
+            "@type": "Organization",
+            name: "Bezi",
+          },
           {
             "@type": "Organization",
             name: "Epic Games",

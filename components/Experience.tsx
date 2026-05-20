@@ -8,6 +8,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 const JOBS = [
   {
+    company: "Bezi",
+    role: "Senior Software Engineer",
+    period: "May 2026 - Present",
+    location: "Vancouver, Canada",
+    highlights: [
+      "Building software systems for collaborative 3D creation workflows at the intersection of AI and realtime graphics",
+      "Shaping platform architecture and product engineering for browser-native spatial content tooling",
+      "Applying production pipeline thinking to user-facing creative systems, performance, and developer experience",
+    ],
+    color: "#75d5ff",
+    productions: [],
+  },
+  {
     company: "Epic Games",
     role: "Senior Pipeline Engineer",
     period: "May 2025 - Mar 2026",

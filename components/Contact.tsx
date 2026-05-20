@@ -63,18 +63,18 @@ export default function Contact() {
               Let&apos;s build the next generation of creative infrastructure
             </h2>
             <p className="mt-5 text-base leading-8 text-subtle">
-              I&apos;m open to senior and staff-level platform, AI, and pipeline engineering roles
-              where production tooling, real-time 3D, and generative systems intersect.
+              I&apos;m always happy to connect around software engineering, AI systems,
+              realtime 3D, and production tooling for creative teams.
             </p>
 
             <div className="mt-8 space-y-3 text-sm text-subtle">
               <div className="flex items-center gap-3">
                 <span className="h-2 w-2 rounded-full bg-accent" />
-                Based in Vancouver, and open to hybrid and remote opportunities in Vancouver and Sydney.
+                Based in Vancouver and currently building at Bezi.
               </div>
               <div className="flex items-center gap-3">
                 <span className="h-2 w-2 rounded-full bg-highlight" />
-                Especially interested in AI platform, real-time, and USD pipeline work.
+                Focused on AI platform, realtime 3D, OpenUSD, and creative developer tooling.
               </div>
             </div>
 

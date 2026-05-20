@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const STUDIOS = [
+  { name: "Bezi", years: "2026-Present" },
   { name: "Epic Games", years: "2025-2026" },
   { name: "Sony Pictures Imageworks", years: "2023-2025" },
   { name: "Animal Logic", years: "2021-2023" },
@@ -47,16 +48,17 @@ export default function About() {
             at the intersection of AI and 3D production
           </h2>
           <p className="text-base leading-8 mb-4 text-subtle">
-            I build the infrastructure that makes VFX films and games ship. From
+            I build the infrastructure that makes creative technology ship. From
             OpenUSD asset pipelines at Animal Logic to deploying Model Context
-            Protocol servers inside Epic Games&apos; live Fortnite pipeline, I work
-            where engineering complexity meets creative scale.
+            Protocol servers inside Epic Games&apos; live Fortnite pipeline and now
+            building product software at Bezi, I work where engineering complexity
+            meets creative scale.
           </p>
           <p className="text-base leading-8 text-subtle">
-            At Epic, I was among the first engineers to bring MCP into production at a
-            major game studio and independently built an agentic C++ Unreal Engine
-            runtime combining Claude, Gemini, Depth Pro, Grounding DINO, and SAM2
-            into a single prompt-driven 3D scene construction system.
+            My work spans production pipelines, realtime 3D systems, and AI-native
+            tooling, including agentic Unreal Engine runtimes, cross-DCC OpenUSD
+            workflows, and software platforms that help artists and engineers build
+            faster together.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a

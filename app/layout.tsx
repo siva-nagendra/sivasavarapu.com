@@ -8,9 +8,9 @@ import JsonLd from "@/components/JsonLd";
 const SITE_URL = "https://sivasavarapu.com";
 const SITE_NAME = "Siva Nagendra Savarapu";
 const SITE_TITLE =
-  "Siva Nagendra Savarapu | Senior Pipeline Engineer and Generative AI";
+  "Siva Nagendra Savarapu | Senior Software Engineer at Bezi";
 const SITE_DESCRIPTION =
-  "Portfolio of Siva Nagendra Savarapu, a senior pipeline engineer building production-grade OpenUSD, Unreal Engine, generative AI, and agentic 3D systems for films, games, and real-time content teams.";
+  "Portfolio of Siva Nagendra Savarapu, a senior software engineer at Bezi building AI-native, realtime 3D, OpenUSD, and generative systems for creative tools and content teams.";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   keywords: [
     "Siva Nagendra Savarapu",
-    "Pipeline Engineer",
+    "Senior Software Engineer",
     "Generative AI",
     "OpenUSD",
     "Unreal Engine",
@@ -49,6 +49,7 @@ export const metadata: Metadata = {
     "Computer Vision",
     "USD Stage",
     "MCP",
+    "Bezi",
     "Epic Games",
     "Sony Pictures Imageworks",
     "Animal Logic",
