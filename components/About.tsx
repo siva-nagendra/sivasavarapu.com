@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -51,13 +52,14 @@ export default function About() {
             I build the infrastructure that makes creative technology ship. From
             OpenUSD asset pipelines at Animal Logic to deploying Model Context
             Protocol servers inside Epic Games&apos; live Fortnite pipeline and now
-            building product software at Bezi, I work where engineering complexity
-            meets creative scale.
+            building AI-agent infrastructure at Bezi, I work where engineering
+            complexity meets creative scale.
           </p>
           <p className="text-base leading-8 text-subtle">
             My work spans production pipelines, realtime 3D systems, and AI-native
-            tooling, including agentic Unreal Engine runtimes, cross-DCC OpenUSD
-            workflows, and software platforms that help artists and engineers build
+            tooling, including Unreal Engine tool discovery, virtual-file-system
+            skill systems, agent evaluations, cross-platform plugin delivery, and
+            cross-DCC OpenUSD workflows that help artists and engineers build
             faster together.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -85,7 +87,18 @@ export default function About() {
               key={s.name}
               className="motion-card rounded-lg border border-edge bg-surface px-4 py-3 text-sm"
             >
-              <span className="font-semibold block">{s.name}</span>
+              <span className="font-semibold flex items-center gap-2">
+                {s.name === "Bezi" && (
+                  <Image
+                    src="/images/bezi-app-icon.png"
+                    alt="Bezi"
+                    width={18}
+                    height={18}
+                    className="h-[18px] w-[18px] rounded-md"
+                  />
+                )}
+                {s.name}
+              </span>
               <span className="text-xs text-subtle">{s.years}</span>
             </div>
           ))}

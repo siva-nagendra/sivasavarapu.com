@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const LINKS = [
@@ -86,9 +87,16 @@ export default function Nav() {
         </ul>
         <a
           href="mailto:siva_nagendra@outlook.com"
-          className="motion-pill hidden md:inline-flex items-center gap-2 rounded-full border border-accent px-4 py-2 text-xs font-medium text-accent transition-all duration-200 hover:bg-accent hover:text-bg"
+          className="motion-pill hidden md:inline-flex items-center gap-2 rounded-full border border-accent px-3.5 py-2 text-xs font-medium text-accent transition-all duration-200 hover:bg-accent hover:text-bg"
         >
-          Senior Software Engineer · Bezi
+          <Image
+            src="/images/bezi-app-icon.png"
+            alt="Bezi"
+            width={18}
+            height={18}
+            className="h-[18px] w-[18px] rounded-md"
+          />
+          Software Engineer · Bezi
         </a>
       </nav>
     </header>

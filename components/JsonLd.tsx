@@ -27,9 +27,9 @@ export default function JsonLd() {
         url: "https://sivasavarapu.com",
         image: "https://sivasavarapu.com/opengraph-image",
         email: "siva_nagendra@outlook.com",
-        jobTitle: "Senior Software Engineer at Bezi",
+        jobTitle: "Software Engineer at Bezi",
         description:
-          "Senior software engineer at Bezi specializing in OpenUSD, Unreal Engine, generative AI, and production-grade 3D systems for creative tools and realtime content teams.",
+          "Software engineer at Bezi building AI-agent infrastructure for Unreal Engine game development, including tool discovery, skill systems, evaluation workflows, and cross-platform plugin delivery.",
         sameAs,
         knowsAbout: [
           "OpenUSD",
@@ -43,6 +43,11 @@ export default function JsonLd() {
           "TensorFlow",
           "Computer Vision",
           "Model Context Protocol",
+          "TypeScript",
+          "Rust",
+          "Unreal Engine Plugins",
+          "Agent Evals",
+          "LLM-as-Judge",
           "VFX",
         ],
         homeLocation: [

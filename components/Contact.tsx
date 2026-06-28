@@ -70,11 +70,11 @@ export default function Contact() {
             <div className="mt-8 space-y-3 text-sm text-subtle">
               <div className="flex items-center gap-3">
                 <span className="h-2 w-2 rounded-full bg-accent" />
-                Based in Vancouver and currently building at Bezi.
+                Based in Vancouver and currently building AI-agent infrastructure at Bezi.
               </div>
               <div className="flex items-center gap-3">
                 <span className="h-2 w-2 rounded-full bg-highlight" />
-                Focused on AI platform, realtime 3D, OpenUSD, and creative developer tooling.
+                Focused on Unreal Engine agent workflows, evaluation systems, plugin delivery, and creative developer tooling.
               </div>
             </div>
 

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,13 +10,15 @@ gsap.registerPlugin(ScrollTrigger);
 const JOBS = [
   {
     company: "Bezi",
-    role: "Senior Software Engineer",
+    role: "Software Engineer",
     period: "May 2026 - Present",
     location: "Vancouver, Canada",
     highlights: [
-      "Building software systems for collaborative 3D creation workflows at the intersection of AI and realtime graphics",
-      "Shaping platform architecture and product engineering for browser-native spatial content tooling",
-      "Applying production pipeline thinking to user-facing creative systems, performance, and developer experience",
+      "Building an Unreal Engine AI agentic harness for game development, enabling agents to discover, reason about, and execute UE tools through production-ready workflows",
+      "Authored a new skills system backed by virtual file systems, creating a scalable foundation for packaging, loading, and orchestrating agent capabilities",
+      "Implemented agentic search and discovery systems for Unreal Engine tools and actions using LLM-as-judge workflows and evaluation loops to measure relevance, correctness, and performance",
+      "Built CI systems to package and distribute Unreal Engine plugins across target platforms and multiple engine versions",
+      "Developed across TypeScript, Rust, and C++ libraries, integrating AI infrastructure with native Unreal Engine tooling and plugin ecosystems",
     ],
     color: "#75d5ff",
     productions: [],
@@ -136,10 +139,19 @@ export default function Experience() {
                   <div>
                     {/* suppressHydrationWarning: dynamic hex color */}
                     <span
-                      className="text-xs font-semibold uppercase tracking-wider"
+                      className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider"
                       style={{ color: job.color }}
                       suppressHydrationWarning
                     >
+                      {job.company === "Bezi" && (
+                        <Image
+                          src="/images/bezi-app-icon.png"
+                          alt="Bezi"
+                          width={18}
+                          height={18}
+                          className="h-[18px] w-[18px] rounded-md"
+                        />
+                      )}
                       {job.company}
                     </span>
                     <h3 className="text-lg font-semibold mt-0.5">{job.role}</h3>
