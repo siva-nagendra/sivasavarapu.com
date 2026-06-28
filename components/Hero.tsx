@@ -33,7 +33,7 @@ const FACTS = [
 
 const STUDIOS = ["Bezi", "Epic Games", "Sony Pictures Imageworks", "Animal Logic"];
 const HERO_SUBTEXT =
-  "Software Engineer at Bezi, building AI-agent infrastructure for Unreal Engine game development, including tool discovery, skill systems, evaluation workflows, and cross-platform plugin delivery.";
+  "Senior Software Engineer at Bezi, building AI-agent infrastructure for Unreal Engine game development, tool discovery, evaluation workflows, and cross-platform plugin delivery.";
 const HERO_SUBTEXT_WORDS = HERO_SUBTEXT.split(" ");
 
 export default function Hero() {

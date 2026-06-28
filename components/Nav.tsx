@@ -96,7 +96,7 @@ export default function Nav() {
             height={18}
             className="h-[18px] w-[18px] rounded-md"
           />
-          Software Engineer · Bezi
+          Senior Software Engineer · Bezi
         </a>
       </nav>
     </header>

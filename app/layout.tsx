@@ -8,9 +8,9 @@ import JsonLd from "@/components/JsonLd";
 const SITE_URL = "https://sivasavarapu.com";
 const SITE_NAME = "Siva Nagendra Savarapu";
 const SITE_TITLE =
-  "Siva Nagendra Savarapu | Software Engineer at Bezi";
+  "Siva Nagendra Savarapu | Senior Software Engineer at Bezi";
 const SITE_DESCRIPTION =
-  "Portfolio of Siva Nagendra Savarapu, a software engineer at Bezi building AI-agent infrastructure for Unreal Engine game development, tool discovery, evaluation workflows, and cross-platform plugin delivery.";
+  "Portfolio of Siva Nagendra Savarapu, a senior software engineer at Bezi building AI-agent infrastructure for Unreal Engine game development, tool discovery, evaluation workflows, and cross-platform plugin delivery.";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",

@@ -17,7 +17,7 @@ export default function JsonLd() {
         url: "https://sivasavarapu.com",
         name: "Siva Nagendra Savarapu",
         description:
-          "Portfolio of Siva Nagendra Savarapu, a senior pipeline engineer building production-grade OpenUSD, Unreal Engine, generative AI, and agentic 3D systems.",
+          "Portfolio of Siva Nagendra Savarapu, a senior software engineer at Bezi building AI-agent infrastructure for Unreal Engine game development.",
         inLanguage: "en-CA",
       },
       {
@@ -27,9 +27,9 @@ export default function JsonLd() {
         url: "https://sivasavarapu.com",
         image: "https://sivasavarapu.com/opengraph-image",
         email: "siva_nagendra@outlook.com",
-        jobTitle: "Software Engineer at Bezi",
+        jobTitle: "Senior Software Engineer at Bezi",
         description:
-          "Software engineer at Bezi building AI-agent infrastructure for Unreal Engine game development, including tool discovery, skill systems, evaluation workflows, and cross-platform plugin delivery.",
+          "Senior software engineer at Bezi building AI-agent infrastructure for Unreal Engine game development, including tool discovery, skill systems, evaluation workflows, and cross-platform plugin delivery.",
         sameAs,
         knowsAbout: [
           "OpenUSD",

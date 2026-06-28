@@ -10,15 +10,15 @@ gsap.registerPlugin(ScrollTrigger);
 const JOBS = [
   {
     company: "Bezi",
-    role: "Software Engineer",
+    role: "Senior Software Engineer",
     period: "May 2026 - Present",
     location: "Vancouver, Canada",
     highlights: [
-      "Building an Unreal Engine AI agentic harness for game development, enabling agents to discover, reason about, and execute UE tools through production-ready workflows",
-      "Authored a new skills system backed by virtual file systems, creating a scalable foundation for packaging, loading, and orchestrating agent capabilities",
-      "Implemented agentic search and discovery systems for Unreal Engine tools and actions using LLM-as-judge workflows and evaluation loops to measure relevance, correctness, and performance",
-      "Built CI systems to package and distribute Unreal Engine plugins across target platforms and multiple engine versions",
-      "Developed across TypeScript, Rust, and C++ libraries, integrating AI infrastructure with native Unreal Engine tooling and plugin ecosystems",
+      "Built AI-agent harnesses for Unreal Engine game development.",
+      "Designed VFS-backed skills systems for packaging and loading agents.",
+      "Implemented Unreal tool discovery and LLM evaluation workflows.",
+      "Built CI for cross-platform Unreal Engine plugin releases.",
+      "Developed AI infrastructure in TypeScript, Rust, and C++.",
     ],
     color: "#75d5ff",
     productions: [],
